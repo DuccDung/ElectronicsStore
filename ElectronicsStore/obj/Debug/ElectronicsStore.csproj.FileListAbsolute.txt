@@ -1,0 +1,10 @@
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\bin\Debug\ElectronicsStore.exe.config
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\bin\Debug\ElectronicsStore.exe
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\bin\Debug\ElectronicsStore.pdb
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\obj\Debug\ElectronicsStore.csproj.AssemblyReference.cache
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\obj\Debug\ElectronicsStore.Form1.resources
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\obj\Debug\ElectronicsStore.Properties.Resources.resources
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\obj\Debug\ElectronicsStore.csproj.GenerateResource.cache
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\obj\Debug\ElectronicsStore.csproj.CoreCompileInputs.cache
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\obj\Debug\ElectronicsStore.exe
+D:\laptrinhweb\code_outsrc\ElectronicsStore\ElectronicsStore\obj\Debug\ElectronicsStore.pdb
