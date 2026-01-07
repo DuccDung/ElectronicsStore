@@ -64,7 +64,17 @@ public partial class ElectronicsStoreContext : DbContext
     public virtual DbSet<VwTopSellingSku> VwTopSellingSkus { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer(Environment.GetEnvironmentVariable("DB_ConnectionString"));
+    {
+        if (!optionsBuilder.IsConfigured)
+        {
+            var cs = Environment.GetEnvironmentVariable("DB_ConnectionString");
+            if (string.IsNullOrWhiteSpace(cs))
+                throw new InvalidOperationException("DB_ConnectionString is NULL/EMPTY. Check: .env, Copy to Output, and Env.Load().");
+
+            optionsBuilder.UseSqlServer(cs);
+        }
+    }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

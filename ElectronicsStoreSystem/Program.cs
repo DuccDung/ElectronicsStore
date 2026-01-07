@@ -9,7 +9,7 @@ namespace ElectronicsStoreSystem
         [STAThread]
         static void Main()
         {
-            Env.Load(); // Load .env file contents into environment variables
+            Env.Load(); 
             ApplicationConfiguration.Initialize();
             Application.Run(new LoginForm());
         }

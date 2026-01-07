@@ -3,7 +3,6 @@ D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Deb
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\ElectronicsStoreSystem.runtimeconfig.json
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\ElectronicsStoreSystem.dll
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\ElectronicsStoreSystem.pdb
-D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.Form1.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.LoginForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.csproj.GenerateResource.cache
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.GeneratedMSBuildEditorConfig.editorconfig
@@ -138,3 +137,6 @@ D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Deb
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\DotNetEnv.dll
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\Microsoft.Extensions.Configuration.dll
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\Sprache.dll
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.sourcelink.json
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\.env
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.DashBoardForm.resources

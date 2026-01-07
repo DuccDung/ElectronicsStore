@@ -1,4 +1,8 @@
-﻿using System;
+﻿using ElectronicsStoreSystem.Model;
+using ElectronicsStoreSystem.Utils;
+using ElectronicsStoreSystem.View;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -8,8 +12,8 @@ namespace ElectronicsStoreSystem
     {
         public LoginForm()
         {
-            InitializeComponent();  // bắt buộc để Designer hoạt động
-            BuildUI();              // mình dựng UI bằng code
+            InitializeComponent();  
+            BuildUI();              
         }
 
         private void BuildUI()
@@ -161,7 +165,7 @@ namespace ElectronicsStoreSystem
             this.AcceptButton = btnLogin;
 
             // Click login
-            btnLogin.Click += (sender, e) =>
+            btnLogin.Click += async (sender, e) =>
             {
                 var user = txtUsername.Text.Trim();
                 var pass = txtPassword.Text;
@@ -172,22 +176,20 @@ namespace ElectronicsStoreSystem
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-
-                // Demo: admin / 123
-                if (user == "admin" && pass == "123")
-                {
-                    MessageBox.Show("Đăng nhập thành công (demo).", "OK",
-                        MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                    // TODO: mở dashboard
-                    // var main = new Form1();
-                    // main.Show();
-                    // this.Hide();
-                }
-                else
+                using ElectronicsStoreContext db = new ElectronicsStoreContext();
+                var account = await db.Employees.Where(x => x.Username == user && x.PasswordHash == HashHelper.Sha256(pass)).FirstOrDefaultAsync();
+                if (account == null)
                 {
                     MessageBox.Show("Sai Username hoặc Password.", "Lỗi đăng nhập",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DashBoardForm dashboard = new DashBoardForm();
+                    dashboard.Show();
+                    this.Hide();
+                    MessageBox.Show("Đăng nhập thành công.", "OK",
+                      MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             };
 
