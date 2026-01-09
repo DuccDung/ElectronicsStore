@@ -1,4 +1,5 @@
-﻿namespace ElectronicsStoreSystem.View
+﻿
+namespace ElectronicsStoreSystem.View
 {
     partial class DashBoardForm
     {
@@ -17,6 +18,7 @@
         private System.Windows.Forms.Button btnCategories;
         private System.Windows.Forms.Button btnSuppliers;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnPurchase;
 
         /// <summary>
         /// Clean up any resources being used.
@@ -44,6 +46,7 @@
             this.btnCategories = new System.Windows.Forms.Button();
             this.btnProducts = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.btnPurchase = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelTop = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -55,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.panel1.Controls.Add(this.btnPurchase);
             this.panel1.Controls.Add(this.btnSuppliers);
             this.panel1.Controls.Add(this.btnCategories);
             this.panel1.Controls.Add(this.btnProducts);
@@ -66,6 +70,22 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(10, 12, 10, 12);
             this.panel1.Size = new System.Drawing.Size(268, 673);
             this.panel1.TabIndex = 2;
+            // 
+            // btnPurchase
+            // 
+            this.btnPurchase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(40)))));
+            this.btnPurchase.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPurchase.FlatAppearance.BorderSize = 0;
+            this.btnPurchase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPurchase.ForeColor = System.Drawing.Color.White;
+            this.btnPurchase.Location = new System.Drawing.Point(10, 116); // chỉnh lại nếu cần
+            this.btnPurchase.Name = "btnPurchase";
+            this.btnPurchase.Size = new System.Drawing.Size(248, 44);
+            this.btnPurchase.TabIndex = 4;
+            this.btnPurchase.Text = "  Nhập hàng";
+            this.btnPurchase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPurchase.UseVisualStyleBackColor = false;
+            this.btnPurchase.Click += new System.EventHandler(this.btnPurchase_Click);
             // 
             // btnSuppliers
             // 
@@ -193,6 +213,8 @@
             this.ResumeLayout(false);
 
         }
+
+       
 
         #endregion
     }

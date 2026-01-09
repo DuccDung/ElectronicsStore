@@ -49,6 +49,18 @@ namespace ElectronicsStoreSystem.View
         {
             this.Close();
         }
-
+        private void OpenChildForm(Form child)
+        {
+            panelContent.Controls.Clear();
+            child.TopLevel = false;
+            child.FormBorderStyle = FormBorderStyle.None;
+            child.Dock = DockStyle.Fill;
+            panelContent.Controls.Add(child);
+            child.Show();
+        }
+        private void btnPurchase_Click(object sender, EventArgs e)
+        {
+          OpenChildForm(new PurchaseReceiveForm());
+        }
     }
 }
