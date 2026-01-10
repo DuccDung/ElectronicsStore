@@ -1,5 +1,8 @@
 ﻿
 
+using ElectronicsStoreSystem.Model;
+using Microsoft.EntityFrameworkCore;
+
 namespace ElectronicsStoreSystem.View
 {
         partial class PurchaseReceiveForm
@@ -52,11 +55,6 @@ namespace ElectronicsStoreSystem.View
             lblHeaderTitle = new Label();
             panelGrid = new Panel();
             dgvLines = new DataGridView();
-            colSku = new DataGridViewComboBoxColumn();
-            colName = new DataGridViewTextBoxColumn();
-            colQty = new DataGridViewTextBoxColumn();
-            colUnitCost = new DataGridViewTextBoxColumn();
-            colLineTotal = new DataGridViewTextBoxColumn();
             panelGridTop = new Panel();
             btnRemoveRow = new Button();
             btnAddRow = new Button();
@@ -64,6 +62,11 @@ namespace ElectronicsStoreSystem.View
             btnImport = new Button();
             lblSubtotalValue = new Label();
             lblSubtotalText = new Label();
+            ColSku = new DataGridViewTextBoxColumn();
+            colName = new DataGridViewTextBoxColumn();
+            colQty = new DataGridViewTextBoxColumn();
+            colUnitCost = new DataGridViewTextBoxColumn();
+            colLineTotal = new DataGridViewTextBoxColumn();
             rootLayout.SuspendLayout();
             panelHeader.SuspendLayout();
             panelGrid.SuspendLayout();
@@ -135,6 +138,7 @@ namespace ElectronicsStoreSystem.View
             cboSupplier.Name = "cboSupplier";
             cboSupplier.Size = new Size(320, 28);
             cboSupplier.TabIndex = 2;
+            cboSupplier.SelectedIndexChanged += cboSupplier_SelectedIndexChanged;
             // 
             // lblSupplier
             // 
@@ -195,7 +199,7 @@ namespace ElectronicsStoreSystem.View
             dgvLines.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvLines.BackgroundColor = Color.White;
             dgvLines.ColumnHeadersHeight = 29;
-            dgvLines.Columns.AddRange(new DataGridViewColumn[] { colSku, colName, colQty, colUnitCost, colLineTotal });
+            dgvLines.Columns.AddRange(new DataGridViewColumn[] { ColSku, colName, colQty, colUnitCost, colLineTotal });
             dgvLines.Dock = DockStyle.Fill;
             dgvLines.Location = new Point(16, 70);
             dgvLines.Margin = new Padding(3, 4, 3, 4);
@@ -204,38 +208,7 @@ namespace ElectronicsStoreSystem.View
             dgvLines.RowHeadersWidth = 51;
             dgvLines.Size = new Size(796, 352);
             dgvLines.TabIndex = 0;
-            // 
-            // colSku
-            // 
-            colSku.HeaderText = "SKU";
-            colSku.MinimumWidth = 6;
-            colSku.Name = "colSku";
-            // 
-            // colName
-            // 
-            colName.HeaderText = "Tên sản phẩm";
-            colName.MinimumWidth = 6;
-            colName.Name = "colName";
-            colName.ReadOnly = true;
-            // 
-            // colQty
-            // 
-            colQty.HeaderText = "Số lượng";
-            colQty.MinimumWidth = 6;
-            colQty.Name = "colQty";
-            // 
-            // colUnitCost
-            // 
-            colUnitCost.HeaderText = "Giá nhập";
-            colUnitCost.MinimumWidth = 6;
-            colUnitCost.Name = "colUnitCost";
-            // 
-            // colLineTotal
-            // 
-            colLineTotal.HeaderText = "Thành tiền";
-            colLineTotal.MinimumWidth = 6;
-            colLineTotal.Name = "colLineTotal";
-            colLineTotal.ReadOnly = true;
+            dgvLines.CellContentClick += dgvLines_CellContentClick;
             // 
             // panelGridTop
             // 
@@ -269,6 +242,7 @@ namespace ElectronicsStoreSystem.View
             btnAddRow.TabIndex = 1;
             btnAddRow.Text = "+ Thêm dòng";
             btnAddRow.UseVisualStyleBackColor = true;
+            btnAddRow.Click += btnAddRow_Click;
             // 
             // panelFooter
             // 
@@ -320,6 +294,39 @@ namespace ElectronicsStoreSystem.View
             lblSubtotalText.TabIndex = 2;
             lblSubtotalText.Text = "Tổng tiền:";
             // 
+            // ColSku
+            // 
+            ColSku.DataPropertyName = "SkuId";
+            ColSku.HeaderText = "SkuId";
+            ColSku.MinimumWidth = 6;
+            ColSku.Name = "ColSku";
+            // 
+            // colName
+            // 
+            colName.HeaderText = "Tên sản phẩm";
+            colName.MinimumWidth = 6;
+            colName.Name = "colName";
+            colName.ReadOnly = true;
+            // 
+            // colQty
+            // 
+            colQty.HeaderText = "Số lượng";
+            colQty.MinimumWidth = 6;
+            colQty.Name = "colQty";
+            // 
+            // colUnitCost
+            // 
+            colUnitCost.HeaderText = "Giá nhập";
+            colUnitCost.MinimumWidth = 6;
+            colUnitCost.Name = "colUnitCost";
+            // 
+            // colLineTotal
+            // 
+            colLineTotal.HeaderText = "Thành tiền";
+            colLineTotal.MinimumWidth = 6;
+            colLineTotal.Name = "colLineTotal";
+            colLineTotal.ReadOnly = true;
+            // 
             // PurchaseReceiveForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -342,12 +349,196 @@ namespace ElectronicsStoreSystem.View
             ResumeLayout(false);
         }
 
-        private void btnImport_Click(object sender, EventArgs e)
+        private async void btnImport_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // 1) Validate header
+                if (cboStore.SelectedValue == null)
+                {
+                    MessageBox.Show("Vui lòng chọn Cửa hàng.");
+                    return;
+                }
+
+                if (cboSupplier.SelectedValue == null)
+                {
+                    MessageBox.Show("Vui lòng chọn Nhà cung cấp.");
+                    return;
+                }
+
+                // bạn đang dùng ValueMember = StoreCode / SupplierCode
+                string storeCode = cboStore.SelectedValue.ToString()!;
+                string supplierCode = cboSupplier.SelectedValue.ToString()!;
+
+                // 2) Read lines from grid
+                var lines = new List<(int skuId, decimal qty, decimal unitCost)>();
+
+                foreach (DataGridViewRow row in dgvLines.Rows)
+                {
+                    if (row.IsNewRow) continue;
+
+                    // Lưu ý: bạn đặt tên cột SKU là "ColSku" (chữ C hoa)
+                    var skuObj = row.Cells["ColSku"].Value;
+                    if (skuObj == null) continue;
+
+                    if (!int.TryParse(skuObj.ToString(), out int skuId) || skuId <= 0)
+                        continue;
+
+                    decimal qty = ToDecimal(row.Cells["colQty"].Value);
+                    decimal unitCost = ToDecimal(row.Cells["colUnitCost"].Value);
+
+                    if (qty <= 0)
+                        continue;
+
+                    lines.Add((skuId, qty, unitCost));
+                }
+
+                if (lines.Count == 0)
+                {
+                    MessageBox.Show("Chưa có dòng hàng hợp lệ (SKU, Số lượng > 0).");
+                    return;
+                }
+
+                // gộp SKU trùng nhau (nếu user add trùng)
+                lines = lines
+                    .GroupBy(x => x.skuId)
+                    .Select(g => (skuId: g.Key, qty: g.Sum(x => x.qty), unitCost: g.Average(x => x.unitCost)))
+                    .ToList();
+
+                // 3) DB transaction
+                using var db = new ElectronicsStoreContext();
+                await using var tran = await db.Database.BeginTransactionAsync();
+
+                // lấy StoreID/SupplierID từ code (vì combobox dùng Code)
+                var store = await db.Stores.FirstAsync(x => x.StoreCode == storeCode);
+                var supplier = await db.Suppliers.FirstAsync(x => x.SupplierCode == supplierCode);
+
+                int storeId = store.StoreId;
+                int supplierId = supplier.SupplierId;
+
+                // TODO: thay bằng user đang login
+                int employeeId = 2; // admin
+
+                var now = DateTime.Now;
+                var subtotal = lines.Sum(x => x.qty * x.unitCost);
+
+                // 4) Insert PurchaseOrder (RECEIVED luôn)
+                var po = new PurchaseOrder
+                {
+                    StoreId = storeId,
+                    SupplierId = supplierId,
+                    CreatedBy = employeeId,
+
+                    Status = "RECEIVED",
+                    OrderDate = now,
+                    ReceivedDate = now,
+                    ExpectedDate = now,
+                    Subtotal = subtotal,
+                    DiscountAmt = 0,
+                    TaxAmt = 0,
+
+                    Pocode = "PO" + now.ToString("yyyyMMddHHmmss"),
+                    Note = txtNote.Text
+                };
+
+                db.PurchaseOrders.Add(po);
+                await db.SaveChangesAsync(); // lấy POID
+
+                // 5) Insert PurchaseOrderLine (QtyOrdered = QtyReceived)
+                foreach (var l in lines)
+                {
+                    db.PurchaseOrderLines.Add(new PurchaseOrderLine
+                    {
+                        Poid = po.Poid,
+                        SkuId = l.skuId,
+                        QtyOrdered = l.qty,
+                        QtyReceived = l.qty,
+                        UnitCost = l.unitCost,
+                        DiscountAmt = 0,
+                        TaxRate = 0
+                    });
+                }
+                await db.SaveChangesAsync();
+
+                // 6) Insert StockTxn (IN)
+                var txn = new StockTxn
+                {
+                    StoreId = storeId,
+                    TxnType = "IN",
+                    RefType = "PO",
+                    RefId = po.Poid,
+                    TxnDate = now,
+                    CreatedBy = employeeId,
+                    Note = $"Nhập kho theo {po.Pocode}"
+                };
+
+                db.StockTxns.Add(txn);
+                await db.SaveChangesAsync(); // lấy StockTxnID
+
+                // 7) Insert StockTxnLine
+                foreach (var l in lines)
+                {
+                    db.StockTxnLines.Add(new StockTxnLine
+                    {
+                        StockTxnId = txn.StockTxnId,
+                        SkuId = l.skuId,
+                        Qty = l.qty,
+                        UnitCost = l.unitCost
+                    });
+                }
+                await db.SaveChangesAsync();
+
+                // 8) Upsert StockBalance (cộng tồn)
+                var skuIds = lines.Select(x => x.skuId).ToList();
+                var existingBalances = await db.StockBalances
+                    .Where(b => b.StoreId == storeId && skuIds.Contains(b.SkuId))
+                    .ToListAsync();
+
+                foreach (var l in lines)
+                {
+                    var bal = existingBalances.FirstOrDefault(b => b.SkuId == l.skuId);
+                    if (bal == null)
+                    {
+                        bal = new StockBalance
+                        {
+                            StoreId = storeId,
+                            SkuId = l.skuId,
+                            OnHandQty = 0,
+                            ReservedQty = 0,
+                            MinQty = 0,
+                            UpdatedAt = now
+                        };
+                        db.StockBalances.Add(bal);
+                        existingBalances.Add(bal);
+                    }
+
+                    bal.OnHandQty += l.qty;
+                    bal.UpdatedAt = now;
+                }
+
+                await db.SaveChangesAsync();
+                await tran.CommitAsync();
+
+                MessageBox.Show($"Nhập kho thành công! Mã phiếu: {po.Pocode}");
+
+                // 9) Reset UI
+                dgvLines.Rows.Clear();
+                lblSubtotalValue.Text = "0";
+                txtNote.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi nhập kho: " + ex.Message);
+            }
         }
 
-        private DataGridViewComboBoxColumn colSku;
+        private decimal ToDecimal(object? v)
+        {
+            if (v == null) return 0;
+            return decimal.TryParse(v.ToString(), out var d) ? d : 0;
+        }
+
+        private DataGridViewTextBoxColumn ColSku;
         private DataGridViewTextBoxColumn colName;
         private DataGridViewTextBoxColumn colQty;
         private DataGridViewTextBoxColumn colUnitCost;

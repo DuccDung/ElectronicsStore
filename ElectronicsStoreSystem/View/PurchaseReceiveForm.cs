@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using ElectronicsStoreSystem.Model;
+using ElectronicsStoreSystem.Model.ViewModel;
 using Microsoft.EntityFrameworkCore;
 
 namespace ElectronicsStoreSystem.View
@@ -17,156 +18,86 @@ namespace ElectronicsStoreSystem.View
         public PurchaseReceiveForm()
         {
             InitializeComponent();
+            loadSuppliers();
+            loadStores();
         }
-        //private async void btnImport_Click(object sender, EventArgs e)
-        //{
-        //    if (cboStore.SelectedValue == null || cboSupplier.SelectedValue == null)
-        //    {
-        //        MessageBox.Show("Vui lòng chọn Cửa hàng và Nhà cung cấp");
-        //        return;
-        //    }
 
-        //    var lines = new List<(int SkuId, decimal Qty, decimal UnitCost)>();
+        private void loadSuppliers()
+        {
+            using ElectronicsStoreContext db = new ElectronicsStoreContext();
+            var suppliers = db.Suppliers
+                .Select(s => new Suppliers
+                {
+                    SupplierCode = s.SupplierCode,
+                    SupplierName = s.SupplierName
+                })
+                .ToList();
 
-        //    foreach (DataGridViewRow row in dgvLines.Rows)
-        //    {
-        //        if (row.IsNewRow) continue;
+            cboSupplier.DataSource = suppliers;
+            cboSupplier.DisplayMember = "SupplierName";
+            cboSupplier.ValueMember = "SupplierCode";
+        }
+        private void loadStores()
+        {
+            using ElectronicsStoreContext db = new ElectronicsStoreContext();
+            var stores = db.Stores
+                .Select(s => new
+                {
+                    StoreCode = s.StoreCode,
+                    StoreName = s.StoreCode + " | " + s.StoreName
+                })
+                .ToList();
+            cboStore.DataSource = stores;
+            cboStore.DisplayMember = "StoreName";
+            cboStore.ValueMember = "StoreCode";
+        }
+        private void btnAddRow_Click(object sender, EventArgs e)
+        {
+            using (var pickerForm = new ProductPickerForm())
+            {
+                pickerForm.StartPosition = FormStartPosition.CenterParent;
 
-        //        if (row.Cells["colSku"].Value == null) continue;
+                if (pickerForm.ShowDialog(this) == DialogResult.OK)
+                {
+                    var p = pickerForm.SelectedProduct;
+                    if (p == null) return;
 
-        //        int skuId = Convert.ToInt32(row.Cells["colSku"].Value);
-        //        decimal qty = Convert.ToDecimal(row.Cells["colQty"].Value ?? 0);
-        //        decimal unitCost = Convert.ToDecimal(row.Cells["colUnitCost"].Value ?? 0);
+                    int rowIndex = dgvLines.Rows.Add();
 
-        //        if (qty <= 0) continue;
+                    // colSku là ComboBoxColumn trong form nhập hàng của bạn
+                    dgvLines.Rows[rowIndex].Cells["colSku"].Value = p.SkuID;
+                    dgvLines.Rows[rowIndex].Cells["colName"].Value = p.ProductName;
+                    dgvLines.Rows[rowIndex].Cells["colQty"].Value = p.Quantity;
+                    dgvLines.Rows[rowIndex].Cells["colUnitCost"].Value = p.CostPrice;
+                    dgvLines.Rows[rowIndex].Cells["colLineTotal"].Value = p.CostPrice * p.Quantity; // qty=1
 
-        //        lines.Add((skuId, qty, unitCost));
-        //    }
+                    // Nếu có hàm tính tổng tiền thì gọi ở đây
+                     RecalcTotals();
+                }
+            }
+        }
+        public void RecalcTotals()
+        {
+            decimal total = 0;
+            foreach (DataGridViewRow row in dgvLines.Rows)
+            {
+                if (row.Cells["colLineTotal"].Value != null &&
+                    decimal.TryParse(row.Cells["colLineTotal"]?.Value?.ToString(), out decimal lineTotal))
+                {
+                    total += lineTotal;
+                }
+            }
+            lblSubtotalValue.Text = total.ToString("N2");
+        }
 
-        //    if (lines.Count == 0)
-        //    {
-        //        MessageBox.Show("Chưa có dòng hàng hợp lệ");
-        //        return;
-        //    }
+        private void cboSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        //    int storeId = (int)cboStore.SelectedValue;
-        //    int supplierId = (int)cboSupplier.SelectedValue;
+        }
 
-        //    // TODO: sau này lấy từ user đăng nhập
-        //    int employeeId = 1;
+        private void dgvLines_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-        //    using var db = new ElectronicsStoreContext();
-        //    using var tran = await db.Database.BeginTransactionAsync();
-
-        //    try
-        //    {
-        //        var now = DateTime.Now;
-
-        //        // 1. PurchaseOrder
-        //        var po = new PurchaseOrder
-        //        {
-        //            StoreId = storeId,
-        //            SupplierId = supplierId,
-        //            CreatedBy = employeeId,
-        //            Status = "RECEIVED",
-        //            OrderDate = now,
-        //            ReceivedDate = now,
-        //            Subtotal = lines.Sum(x => x.Qty * x.UnitCost),
-        //            DiscountAmt = 0,
-        //            TaxAmt = 0,
-        //            Pocode = "PO" + now.ToString("yyyyMMddHHmmss"),
-        //            Note = txtNote.Text
-        //        };
-
-        //        db.PurchaseOrders.Add(po);
-        //        await db.SaveChangesAsync();
-
-        //        // 2. PurchaseOrderLine
-        //        foreach (var l in lines)
-        //        {
-        //            db.PurchaseOrderLines.Add(new PurchaseOrderLine
-        //            {
-        //                Poid = po.Poid,
-        //                SkuId = l.SkuId,
-        //                QtyOrdered = l.Qty,
-        //                QtyReceived = l.Qty,
-        //                UnitCost = l.UnitCost,
-        //                DiscountAmt = 0,
-        //                TaxRate = 0
-        //            });
-        //        }
-
-        //        await db.SaveChangesAsync();
-
-        //        // 3. StockTxn
-        //        var txn = new StockTxn
-        //        {
-        //            StoreId = storeId,
-        //            TxnType = "IN",
-        //            RefType = "PO",
-        //            RefId = po.Poid,
-        //            TxnDate = now,
-        //            CreatedBy = employeeId,
-        //            Note = $"Nhập kho theo {po.Pocode}"
-        //        };
-
-        //        db.StockTxns.Add(txn);
-        //        await db.SaveChangesAsync();
-
-        //        // 4. StockTxnLine
-        //        foreach (var l in lines)
-        //        {
-        //            db.StockTxnLines.Add(new StockTxnLine
-        //            {
-        //                StockTxnId = txn.StockTxnId,
-        //                SkuId = l.SkuId,
-        //                Qty = l.Qty,
-        //                UnitCost = l.UnitCost
-        //            });
-        //        }
-
-        //        await db.SaveChangesAsync();
-
-        //        // 5. StockBalance (upsert)
-        //        foreach (var l in lines)
-        //        {
-        //            var bal = await db.StockBalances
-        //                .FirstOrDefaultAsync(x => x.StoreId == storeId && x.SkuId == l.SkuId);
-
-        //            if (bal == null)
-        //            {
-        //                bal = new StockBalance
-        //                {
-        //                    StoreId = storeId,
-        //                    SkuId = l.SkuId,
-        //                    OnHandQty = l.Qty,
-        //                    ReservedQty = 0,
-        //                    MinQty = 0,
-        //                    UpdatedAt = now
-        //                };
-        //                db.StockBalances.Add(bal);
-        //            }
-        //            else
-        //            {
-        //                bal.OnHandQty += l.Qty;
-        //                bal.UpdatedAt = now;
-        //            }
-        //        }
-
-        //        await db.SaveChangesAsync();
-        //        await tran.CommitAsync();
-
-        //        MessageBox.Show("Nhập kho thành công");
-
-        //        dgvLines.Rows.Clear();
-        //        dgvLines.Rows.Add();
-        //        lblSubtotalValue.Text = "0";
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        await tran.RollbackAsync();
-        //        MessageBox.Show("Lỗi nhập kho: " + ex.Message);
-        //    }
-        //}
+        }
     }
 }

@@ -7,6 +7,15 @@
     <Compile Update="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\ProductCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\ProductListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\ProductPickerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\PurchaseReceiveForm.cs">
       <SubType>Form</SubType>
     </Compile>

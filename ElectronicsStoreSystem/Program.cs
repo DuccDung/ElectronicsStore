@@ -1,4 +1,5 @@
 using DotNetEnv;
+using ElectronicsStoreSystem.View;
 namespace ElectronicsStoreSystem
 {
     internal static class Program
@@ -11,7 +12,7 @@ namespace ElectronicsStoreSystem
         {
             Env.Load(); 
             ApplicationConfiguration.Initialize();
-            Application.Run(new LoginForm());
+            Application.Run(new DashBoardForm());
         }
     }
 }

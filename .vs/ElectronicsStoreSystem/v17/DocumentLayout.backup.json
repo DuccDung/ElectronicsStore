@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\productlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\productlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\productlistform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\productlistform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\productlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\productlistform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\model\\viewmodel\\productlistitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\model\\viewmodel\\productlistitemvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\model\\viewmodel\\purchaselinevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\model\\viewmodel\\purchaselinevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\purchasereceiveform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\purchasereceiveform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +31,36 @@
       "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\purchasereceiveform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\electronicsstoresystem\\view\\purchasereceiveform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\purchasereceiveform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\productpickerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\productpickerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\productpickerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\productpickerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\productpickerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\productpickerform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\productcreateform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\productcreateform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\model\\viewmodel\\storedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\model\\viewmodel\\storedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\electronicsstoresystem\\view\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\dashboardform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\model\\viewmodel\\suppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\model\\viewmodel\\suppliers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|d:\\laptrinhweb\\code_outsrc\\electronicsstoresystem\\electronicsstoresystem\\view\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD4A77E6-1F39-42D3-B9DA-66F3F7400FE6}|ElectronicsStoreSystem\\ElectronicsStoreSystem.csproj|solutionrelative:electronicsstoresystem\\view\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -33,55 +69,134 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 252,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 103,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PurchaseReceiveForm.cs [Design]",
-              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\PurchaseReceiveForm.cs",
-              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\PurchaseReceiveForm.cs",
-              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\PurchaseReceiveForm.cs [Design]",
-              "RelativeToolTip": "ElectronicsStoreSystem\\View\\PurchaseReceiveForm.cs [Design]",
+              "DocumentIndex": 7,
+              "Title": "ProductPickerForm.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductPickerForm.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\ProductPickerForm.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductPickerForm.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\View\\ProductPickerForm.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAYwEEAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T08:38:16.683Z",
+              "WhenOpened": "2026-01-09T21:02:24.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductPickerForm.cs [Design]",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductPickerForm.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\ProductPickerForm.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductPickerForm.cs [Design]",
+              "RelativeToolTip": "ElectronicsStoreSystem\\View\\ProductPickerForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T14:55:55.355Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
+              "Title": "ProductCreateForm.Designer.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductCreateForm.Designer.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\ProductCreateForm.Designer.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductCreateForm.Designer.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\View\\ProductCreateForm.Designer.cs",
+              "ViewState": "AgIAANcBAAAAAAAAAAAAAOIBAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T20:16:10.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LoginForm.Designer.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\LoginForm.Designer.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\LoginForm.Designer.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\LoginForm.Designer.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\View\\LoginForm.Designer.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T20:02:40.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Suppliers.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Model\\ViewModel\\Suppliers.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\Model\\ViewModel\\Suppliers.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Model\\ViewModel\\Suppliers.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\Model\\ViewModel\\Suppliers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T19:59:28.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StoreDto.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Model\\ViewModel\\StoreDto.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\Model\\ViewModel\\StoreDto.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Model\\ViewModel\\StoreDto.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\Model\\ViewModel\\StoreDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T19:57:20Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductPickerForm.Designer.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductPickerForm.Designer.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\ProductPickerForm.Designer.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductPickerForm.Designer.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\View\\ProductPickerForm.Designer.cs",
+              "ViewState": "AgIAAPgAAAAAAAAAAAAiwAwBAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T15:03:18.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "PurchaseReceiveForm.Designer.cs",
               "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\PurchaseReceiveForm.Designer.cs",
               "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\PurchaseReceiveForm.Designer.cs",
               "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\PurchaseReceiveForm.Designer.cs",
               "RelativeToolTip": "ElectronicsStoreSystem\\View\\PurchaseReceiveForm.Designer.cs",
-              "ViewState": "AgIAAD8BAAAAAAAAAAAmwF8BAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAALABAAAAAAAAAAAAALIBAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-09T08:33:19.305Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Program.cs",
               "RelativeDocumentMoniker": "ElectronicsStoreSystem\\Program.cs",
               "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Program.cs",
               "RelativeToolTip": "ElectronicsStoreSystem\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-09T08:25:34.273Z"
+              "WhenOpened": "2026-01-09T08:25:34.273Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "PurchaseReceiveForm.cs",
               "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\PurchaseReceiveForm.cs",
               "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\PurchaseReceiveForm.cs",
               "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\PurchaseReceiveForm.cs",
               "RelativeToolTip": "ElectronicsStoreSystem\\View\\PurchaseReceiveForm.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAUwKwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAAAGQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-08T03:27:33.661Z",
               "EditorCaption": ""
@@ -89,33 +204,72 @@
           ]
         },
         {
-          "DockedWidth": 86,
-          "SelectedChildIndex": 1,
+          "DockedWidth": 235,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DashBoardForm.cs [Design]",
-              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\DashBoardForm.cs",
-              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\DashBoardForm.cs",
-              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\DashBoardForm.cs [Design]",
-              "RelativeToolTip": "ElectronicsStoreSystem\\View\\DashBoardForm.cs [Design]",
+              "DocumentIndex": 4,
+              "Title": "PurchaseLineVM.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Model\\ViewModel\\PurchaseLineVM.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\Model\\ViewModel\\PurchaseLineVM.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Model\\ViewModel\\PurchaseLineVM.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\Model\\ViewModel\\PurchaseLineVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-07T19:32:51.027Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-09T22:30:25.887Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DashBoardForm.cs",
-              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\DashBoardForm.cs",
-              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\DashBoardForm.cs",
-              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\DashBoardForm.cs",
-              "RelativeToolTip": "ElectronicsStoreSystem\\View\\DashBoardForm.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAuwDMAAAAuAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "ProductListItemVM.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Model\\ViewModel\\ProductListItemVM.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\Model\\ViewModel\\ProductListItemVM.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\Model\\ViewModel\\ProductListItemVM.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\Model\\ViewModel\\ProductListItemVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-07T19:28:08.003Z",
+              "WhenOpened": "2026-01-09T22:28:37.321Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductListForm.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductListForm.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\ProductListForm.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductListForm.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\View\\ProductListForm.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAAAmwMIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T22:17:40.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductListForm.Designer.cs",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductListForm.Designer.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\ProductListForm.Designer.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductListForm.Designer.cs",
+              "RelativeToolTip": "ElectronicsStoreSystem\\View\\ProductListForm.Designer.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAAAF8AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T22:11:57.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProductListForm.cs [Design]",
+              "DocumentMoniker": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductListForm.cs",
+              "RelativeDocumentMoniker": "ElectronicsStoreSystem\\View\\ProductListForm.cs",
+              "ToolTip": "D:\\laptrinhweb\\code_outsrc\\ElectronicsStoreSystem\\ElectronicsStoreSystem\\View\\ProductListForm.cs [Design]",
+              "RelativeToolTip": "ElectronicsStoreSystem\\View\\ProductListForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-09T22:09:24.398Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

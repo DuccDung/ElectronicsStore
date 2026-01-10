@@ -60,7 +60,12 @@ namespace ElectronicsStoreSystem.View
         }
         private void btnPurchase_Click(object sender, EventArgs e)
         {
-          OpenChildForm(new PurchaseReceiveForm());
+            OpenChildForm(new PurchaseReceiveForm());
+        }
+
+        private void btnProducts_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ProductListForm());
         }
     }
 }
