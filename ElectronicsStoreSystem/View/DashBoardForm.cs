@@ -67,5 +67,10 @@ namespace ElectronicsStoreSystem.View
         {
             OpenChildForm(new ProductListForm());
         }
+
+        private void btnCategories_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new CategoryListForm());
+        }
     }
 }

@@ -144,3 +144,5 @@ D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Deb
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.ProductPickerForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.ProductCreateForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.ProductListForm.resources
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.CategoryEditForm.resources
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.CategoryListForm.resources

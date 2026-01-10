@@ -120,6 +120,7 @@ namespace ElectronicsStoreSystem.View
             btnCategories.Text = "  Danh mục";
             btnCategories.TextAlign = ContentAlignment.MiddleLeft;
             btnCategories.UseVisualStyleBackColor = false;
+            btnCategories.Click += btnCategories_Click;
             // 
             // btnProducts
             // 

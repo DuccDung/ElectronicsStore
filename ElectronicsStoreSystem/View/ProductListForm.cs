@@ -25,48 +25,143 @@ namespace ElectronicsStoreSystem.View
             LoadCategoryFilter();
             LoadGrid();
         }
+        public class ComboItem
+        {
+            public int Id { get; set; }
+            public string Name { get; set; } = "";
+        }
 
         private void LoadCategoryFilter()
         {
-            // TODO: bạn sẽ load từ DB Category vào cboCategoryFilter
-            // Gợi ý: thêm "Tất cả" (Value=0)
-            // Hiện tại để demo:
-            cboCategoryFilter.Items.Clear();
-            cboCategoryFilter.Items.Add("Tất cả");
-            cboCategoryFilter.SelectedIndex = 0;
+            using var db = new ElectronicsStoreContext();
+
+            var categories = db.Categories
+                .OrderBy(c => c.CategoryName)
+                .Select(c => new ComboItem { Id = c.CategoryId, Name = c.CategoryName })
+                .ToList();
+
+            categories.Insert(0, new ComboItem { Id = 0, Name = "Tất cả" });
+
+            cboCategoryFilter.DataSource = categories;
+            cboCategoryFilter.DisplayMember = "Name";
+            cboCategoryFilter.ValueMember = "Id";
+            cboCategoryFilter.SelectedValue = 0;
         }
+
 
         private void LoadGrid()
         {
-            // TODO: query join Product + ProductSKU + Category + Brand ở đây
-            // dgvProducts.DataSource = data;
-            using (ElectronicsStoreContext db = new ElectronicsStoreContext())
+            string keyword = (txtKeyword.Text ?? "").Trim();
+            int categoryId = 0;
+
+            if (cboCategoryFilter.SelectedItem is ComboItem item)
             {
-                var products =
-                    (from sku in db.ProductSkus
-                     join p in db.Products on sku.ProductId equals p.ProductId
-                     join c in db.Categories on p.CategoryId equals c.CategoryId
-                     join b in db.Brands on p.BrandId equals b.BrandId
-                     where sku.IsActive
-                     select new ProductListItemVM
-                     {
-                         ProductID = p.ProductId,
-                         SkuID = sku.SkuId,
-
-                         ProductName = p.ProductName,
-                         CategoryName = c.CategoryName,
-                         BrandName = b.BrandName,
-
-                         SKUCode = sku.Skucode,
-                         Model = sku.Model,
-
-                         CostPrice = sku.CostPrice,
-                         SalePrice = sku.SalePrice
-                     }).ToList();
-
-                dgvProducts.DataSource = products;
+                categoryId = item.Id;
             }
+
+            using var db = new ElectronicsStoreContext();
+
+            // Query base
+            var query =
+                from sku in db.ProductSkus
+                join p in db.Products on sku.ProductId equals p.ProductId
+                join c in db.Categories on p.CategoryId equals c.CategoryId
+                join b in db.Brands on p.BrandId equals b.BrandId
+                where sku.IsActive
+                select new ProductListItemVM
+                {
+                    ProductID = p.ProductId,
+                    SkuID = sku.SkuId,
+
+                    ProductName = p.ProductName,
+                    CategoryName = c.CategoryName,
+                    BrandName = b.BrandName,
+
+                    SKUCode = sku.Skucode,
+                    Model = sku.Model,
+
+                    CostPrice = sku.CostPrice,
+                    SalePrice = sku.SalePrice
+                };
+
+            // Filter Category (Id=0 => Tất cả)
+            if (categoryId != 0)
+            {
+                // cần lọc theo CategoryId, nên ta phải lọc trước khi select VM
+                // => cách đơn giản: query lại theo join có CategoryId
+                var query2 =
+                    from sku in db.ProductSkus
+                    join p in db.Products on sku.ProductId equals p.ProductId
+                    join c in db.Categories on p.CategoryId equals c.CategoryId
+                    join b in db.Brands on p.BrandId equals b.BrandId
+                    where sku.IsActive && p.CategoryId == categoryId
+                    select new ProductListItemVM
+                    {
+                        ProductID = p.ProductId,
+                        SkuID = sku.SkuId,
+
+                        ProductName = p.ProductName,
+                        CategoryName = c.CategoryName,
+                        BrandName = b.BrandName,
+
+                        SKUCode = sku.Skucode,
+                        Model = sku.Model,
+
+                        CostPrice = sku.CostPrice,
+                        SalePrice = sku.SalePrice
+                    };
+
+                query = query2;
+            }
+
+            // Filter Keyword (SKU / Model / Tên / Brand / Category)
+            if (!string.IsNullOrWhiteSpace(keyword))
+            {
+                string k = keyword.ToLower();
+
+                query = query.Where(x =>
+                    (x.ProductName ?? "").ToLower().Contains(k) ||
+                    (x.SKUCode ?? "").ToLower().Contains(k) ||
+                    (x.Model ?? "").ToLower().Contains(k) ||
+                    (x.BrandName ?? "").ToLower().Contains(k) ||
+                    (x.CategoryName ?? "").ToLower().Contains(k)
+                );
+            }
+
+            dgvProducts.DataSource = query.ToList();
         }
+
+        //private void LoadGrid()
+        //{
+        //    // TODO: query join Product + ProductSKU + Category + Brand ở đây
+        //    // dgvProducts.DataSource = data;
+        //    using (ElectronicsStoreContext db = new ElectronicsStoreContext())
+        //    {
+        //        var products =
+        //            (from sku in db.ProductSkus
+        //             join p in db.Products on sku.ProductId equals p.ProductId
+        //             join c in db.Categories on p.CategoryId equals c.CategoryId
+        //             join b in db.Brands on p.BrandId equals b.BrandId
+        //             where sku.IsActive
+        //             select new ProductListItemVM
+        //             {
+        //                 ProductID = p.ProductId,
+        //                 SkuID = sku.SkuId,
+
+        //                 ProductName = p.ProductName,
+        //                 CategoryName = c.CategoryName,
+        //                 BrandName = b.BrandName,
+
+        //                 SKUCode = sku.Skucode,
+        //                 Model = sku.Model,
+
+        //                 CostPrice = sku.CostPrice,
+        //                 SalePrice = sku.SalePrice
+        //             }).ToList();
+
+        //        dgvProducts.DataSource = products;
+        //    }
+        //}
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
