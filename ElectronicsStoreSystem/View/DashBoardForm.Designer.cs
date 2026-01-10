@@ -71,7 +71,7 @@ namespace ElectronicsStoreSystem.View
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Padding = new Padding(10, 15, 10, 15);
-            panel1.Size = new Size(268, 841);
+            panel1.Size = new Size(203, 841);
             panel1.TabIndex = 2;
             // 
             // btnEmployee
@@ -84,9 +84,9 @@ namespace ElectronicsStoreSystem.View
             btnEmployee.Location = new Point(10, 365);
             btnEmployee.Margin = new Padding(3, 4, 3, 4);
             btnEmployee.Name = "btnEmployee";
-            btnEmployee.Size = new Size(248, 55);
+            btnEmployee.Size = new Size(183, 55);
             btnEmployee.TabIndex = 5;
-            btnEmployee.Text = "Nhân viên";
+            btnEmployee.Text = " Nhân viên";
             btnEmployee.TextAlign = ContentAlignment.MiddleLeft;
             btnEmployee.UseVisualStyleBackColor = false;
             btnEmployee.Click += btnEmployee_Click;
@@ -101,7 +101,7 @@ namespace ElectronicsStoreSystem.View
             btnPurchase.Location = new Point(10, 310);
             btnPurchase.Margin = new Padding(3, 4, 3, 4);
             btnPurchase.Name = "btnPurchase";
-            btnPurchase.Size = new Size(248, 55);
+            btnPurchase.Size = new Size(183, 55);
             btnPurchase.TabIndex = 4;
             btnPurchase.Text = "  Nhập hàng";
             btnPurchase.TextAlign = ContentAlignment.MiddleLeft;
@@ -118,7 +118,7 @@ namespace ElectronicsStoreSystem.View
             btnSuppliers.Location = new Point(10, 255);
             btnSuppliers.Margin = new Padding(3, 4, 3, 4);
             btnSuppliers.Name = "btnSuppliers";
-            btnSuppliers.Size = new Size(248, 55);
+            btnSuppliers.Size = new Size(183, 55);
             btnSuppliers.TabIndex = 0;
             btnSuppliers.Text = "  Nhà cung cấp";
             btnSuppliers.TextAlign = ContentAlignment.MiddleLeft;
@@ -135,7 +135,7 @@ namespace ElectronicsStoreSystem.View
             btnCategories.Location = new Point(10, 200);
             btnCategories.Margin = new Padding(3, 4, 3, 4);
             btnCategories.Name = "btnCategories";
-            btnCategories.Size = new Size(248, 55);
+            btnCategories.Size = new Size(183, 55);
             btnCategories.TabIndex = 1;
             btnCategories.Text = "  Danh mục";
             btnCategories.TextAlign = ContentAlignment.MiddleLeft;
@@ -152,7 +152,7 @@ namespace ElectronicsStoreSystem.View
             btnProducts.Location = new Point(10, 145);
             btnProducts.Margin = new Padding(3, 4, 3, 4);
             btnProducts.Name = "btnProducts";
-            btnProducts.Size = new Size(248, 55);
+            btnProducts.Size = new Size(183, 55);
             btnProducts.TabIndex = 2;
             btnProducts.Text = "  Sản phẩm";
             btnProducts.TextAlign = ContentAlignment.MiddleLeft;
@@ -169,11 +169,12 @@ namespace ElectronicsStoreSystem.View
             btnDashboard.Location = new Point(10, 90);
             btnDashboard.Margin = new Padding(3, 4, 3, 4);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.Size = new Size(248, 55);
+            btnDashboard.Size = new Size(183, 55);
             btnDashboard.TabIndex = 3;
             btnDashboard.Text = "  Dashboard";
             btnDashboard.TextAlign = ContentAlignment.MiddleLeft;
             btnDashboard.UseVisualStyleBackColor = false;
+            btnDashboard.Click += btnDashboard_Click_1;
             // 
             // lblTitle
             // 
@@ -182,7 +183,7 @@ namespace ElectronicsStoreSystem.View
             lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(10, 15);
             lblTitle.Name = "lblTitle";
-            lblTitle.Size = new Size(248, 75);
+            lblTitle.Size = new Size(183, 75);
             lblTitle.TabIndex = 4;
             lblTitle.Text = "Electronics Store";
             lblTitle.TextAlign = ContentAlignment.MiddleLeft;
@@ -192,11 +193,11 @@ namespace ElectronicsStoreSystem.View
             panelTop.BackColor = Color.White;
             panelTop.Controls.Add(btnClose);
             panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(268, 0);
+            panelTop.Location = new Point(203, 0);
             panelTop.Margin = new Padding(3, 4, 3, 4);
             panelTop.Name = "panelTop";
             panelTop.Padding = new Padding(16, 12, 16, 12);
-            panelTop.Size = new Size(866, 75);
+            panelTop.Size = new Size(1226, 75);
             panelTop.TabIndex = 1;
             panelTop.MouseDown += panelTop_MouseDown;
             // 
@@ -209,7 +210,7 @@ namespace ElectronicsStoreSystem.View
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnClose.ForeColor = Color.Black;
-            btnClose.Location = new Point(769, 12);
+            btnClose.Location = new Point(1129, 12);
             btnClose.Margin = new Padding(3, 4, 3, 4);
             btnClose.Name = "btnClose";
             btnClose.Size = new Size(81, 51);
@@ -222,17 +223,17 @@ namespace ElectronicsStoreSystem.View
             // 
             panelContent.BackColor = Color.FromArgb(245, 246, 250);
             panelContent.Dock = DockStyle.Fill;
-            panelContent.Location = new Point(268, 75);
+            panelContent.Location = new Point(203, 75);
             panelContent.Margin = new Padding(3, 4, 3, 4);
             panelContent.Name = "panelContent";
-            panelContent.Size = new Size(866, 766);
+            panelContent.Size = new Size(1226, 766);
             panelContent.TabIndex = 0;
             // 
             // DashBoardForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1134, 841);
+            ClientSize = new Size(1429, 841);
             Controls.Add(panelContent);
             Controls.Add(panelTop);
             Controls.Add(panel1);

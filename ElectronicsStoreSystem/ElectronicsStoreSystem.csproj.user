@@ -10,6 +10,9 @@
     <Compile Update="View\DashBoardForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\DashboardHomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\EmployeeEditForm.cs">
       <SubType>Form</SubType>
     </Compile>

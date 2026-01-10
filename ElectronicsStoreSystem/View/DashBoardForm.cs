@@ -30,7 +30,6 @@ namespace ElectronicsStoreSystem.View
             btn.MouseEnter += (s, e) => btn.BackColor = System.Drawing.Color.FromArgb(45, 45, 64);
             btn.MouseLeave += (s, e) => btn.BackColor = System.Drawing.Color.FromArgb(28, 28, 40);
         }
-
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -38,7 +37,12 @@ namespace ElectronicsStoreSystem.View
             SetupMenuHover(btnProducts);
             SetupMenuHover(btnCategories);
             SetupMenuHover(btnSuppliers);
+            SetupMenuHover(btnPurchase);
+
             this.FormBorderStyle = FormBorderStyle.None;
+
+            // mở mặc định dashboard POS
+            OpenChildForm(new DashboardHomeForm());
         }
         private void panelTop_MouseDown(object sender, MouseEventArgs e)
         {
@@ -81,6 +85,17 @@ namespace ElectronicsStoreSystem.View
         private void btnEmployee_Click(object sender, EventArgs e)
         {
             OpenChildForm(new EmployeeListForm());
+        }
+
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new DashboardHomeForm());
+        }
+
+        private void btnDashboard_Click_1(object sender, EventArgs e)
+        {
+            OpenChildForm(new DashboardHomeForm());
         }
     }
 }
