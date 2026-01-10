@@ -42,6 +42,7 @@ namespace ElectronicsStoreSystem.View
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnEmployee = new Button();
             btnPurchase = new Button();
             btnSuppliers = new Button();
             btnCategories = new Button();
@@ -58,6 +59,7 @@ namespace ElectronicsStoreSystem.View
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(28, 28, 40);
+            panel1.Controls.Add(btnEmployee);
             panel1.Controls.Add(btnPurchase);
             panel1.Controls.Add(btnSuppliers);
             panel1.Controls.Add(btnCategories);
@@ -71,6 +73,23 @@ namespace ElectronicsStoreSystem.View
             panel1.Padding = new Padding(10, 15, 10, 15);
             panel1.Size = new Size(268, 841);
             panel1.TabIndex = 2;
+            // 
+            // btnEmployee
+            // 
+            btnEmployee.BackColor = Color.FromArgb(28, 28, 40);
+            btnEmployee.Dock = DockStyle.Top;
+            btnEmployee.FlatAppearance.BorderSize = 0;
+            btnEmployee.FlatStyle = FlatStyle.Flat;
+            btnEmployee.ForeColor = Color.White;
+            btnEmployee.Location = new Point(10, 365);
+            btnEmployee.Margin = new Padding(3, 4, 3, 4);
+            btnEmployee.Name = "btnEmployee";
+            btnEmployee.Size = new Size(248, 55);
+            btnEmployee.TabIndex = 5;
+            btnEmployee.Text = "Nhân viên";
+            btnEmployee.TextAlign = ContentAlignment.MiddleLeft;
+            btnEmployee.UseVisualStyleBackColor = false;
+            btnEmployee.Click += btnEmployee_Click;
             // 
             // btnPurchase
             // 
@@ -104,6 +123,7 @@ namespace ElectronicsStoreSystem.View
             btnSuppliers.Text = "  Nhà cung cấp";
             btnSuppliers.TextAlign = ContentAlignment.MiddleLeft;
             btnSuppliers.UseVisualStyleBackColor = false;
+            btnSuppliers.Click += btnSuppliers_Click;
             // 
             // btnCategories
             // 
@@ -229,5 +249,7 @@ namespace ElectronicsStoreSystem.View
 
 
         #endregion
+
+        private Button btnEmployee;
     }
 }
