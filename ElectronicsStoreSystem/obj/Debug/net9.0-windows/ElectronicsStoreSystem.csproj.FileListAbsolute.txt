@@ -151,3 +151,11 @@ D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Deb
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.EmployeeEditForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.EmployeeListForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.DashboardHomeForm.resources
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\ClosedXML.dll
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\ClosedXML.Parser.dll
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\DocumentFormat.OpenXml.dll
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\DocumentFormat.OpenXml.Framework.dll
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\ExcelNumberFormat.dll
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\RBush.dll
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\SixLabors.Fonts.dll
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.MonthlyReportForm.resources

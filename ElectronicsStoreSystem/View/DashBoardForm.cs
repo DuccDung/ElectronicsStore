@@ -97,5 +97,10 @@ namespace ElectronicsStoreSystem.View
         {
             OpenChildForm(new DashboardHomeForm());
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new MonthlyReportForm());
+        }
     }
 }

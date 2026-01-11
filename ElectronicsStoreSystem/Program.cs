@@ -12,7 +12,7 @@ namespace ElectronicsStoreSystem
         {
             Env.Load(); 
             ApplicationConfiguration.Initialize();
-            Application.Run(new DashBoardForm());
+            Application.Run(new LoginForm());
         }
     }
 }

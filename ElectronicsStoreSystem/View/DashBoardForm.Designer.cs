@@ -52,6 +52,7 @@ namespace ElectronicsStoreSystem.View
             panelTop = new Panel();
             btnClose = new Button();
             panelContent = new Panel();
+            button1 = new Button();
             panel1.SuspendLayout();
             panelTop.SuspendLayout();
             SuspendLayout();
@@ -59,6 +60,7 @@ namespace ElectronicsStoreSystem.View
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(28, 28, 40);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(btnEmployee);
             panel1.Controls.Add(btnPurchase);
             panel1.Controls.Add(btnSuppliers);
@@ -229,6 +231,23 @@ namespace ElectronicsStoreSystem.View
             panelContent.Size = new Size(1226, 766);
             panelContent.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(28, 28, 40);
+            button1.Dock = DockStyle.Top;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(10, 420);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(183, 55);
+            button1.TabIndex = 6;
+            button1.Text = "Báo cáo & thống kê";
+            button1.TextAlign = ContentAlignment.MiddleLeft;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // DashBoardForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -252,5 +271,6 @@ namespace ElectronicsStoreSystem.View
         #endregion
 
         private Button btnEmployee;
+        private Button button1;
     }
 }
