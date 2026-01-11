@@ -1,14 +1,19 @@
 ﻿using ElectronicsStoreSystem.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ElectronicsStoreSystem.View
 {
-    public partial class EmployeeEditForm : Form
+    public partial class EmpEditForm : Form
     {
         private readonly int? _employeeId;
 
@@ -17,15 +22,17 @@ namespace ElectronicsStoreSystem.View
             public int Id { get; set; }
             public string Name { get; set; } = "";
         }
-
-        public EmployeeEditForm(int? employeeId)
+        public EmpEditForm()
+        {
+            InitializeComponent();
+        }
+        public EmpEditForm(int? employeeId)
         {
             _employeeId = employeeId;
             InitializeComponent();
             LoadRoleStore();
             LoadDataIfEdit();
         }
-
         private void LoadRoleStore()
         {
             using var db = new ElectronicsStoreContext();
@@ -87,7 +94,6 @@ namespace ElectronicsStoreSystem.View
             using var sha = SHA256.Create();
             return sha.ComputeHash(Encoding.UTF8.GetBytes(raw));
         }
-
         private async void btnSave_Click(object sender, EventArgs e)
         {
             string code = (txtCode.Text ?? "").Trim();

@@ -1,6 +1,7 @@
-﻿namespace ElectronicsStoreSystem.View
+﻿
+namespace ElectronicsStoreSystem.View
 {
-    partial class EmployeeEditForm
+    partial class EmpEditForm
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -85,7 +86,7 @@
 
             this.SuspendLayout();
 
-            // EmployeeEditForm
+            // Form
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(720, 420);
@@ -101,189 +102,171 @@
             this.lblTitle.Location = new System.Drawing.Point(16, 12);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(98, 28);
-            this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Nhân viên";
 
+            // Layout constants (fixed coordinates only - no top += gap)
             int leftLabel = 16;
             int leftInput = 160;
-            int top = 60;
-            int gap = 34;
+
+            // Row Y positions
+            int yCode = 60;
+            int yFullName = 94;
+            int yUsername = 128;
+            int yPassword = 162;
+            int yRole = 196;
+            int yStore = 230;
+            int yPhone = 264;
+            int yEmail = 298;
+            int yAddress = 332;
+            int yBaseSalary = 366;
 
             // lblCode
             this.lblCode.AutoSize = true;
-            this.lblCode.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblCode.Location = new System.Drawing.Point(leftLabel, yCode);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(53, 20);
-            this.lblCode.TabIndex = 1;
             this.lblCode.Text = "Mã NV";
+
             // txtCode
-            this.txtCode.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.txtCode.Location = new System.Drawing.Point(leftInput, yCode - 4);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(520, 27);
-            this.txtCode.TabIndex = 2;
-
-            top += gap;
 
             // lblFullName
             this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblFullName.Location = new System.Drawing.Point(leftLabel, yFullName);
             this.lblFullName.Name = "lblFullName";
             this.lblFullName.Size = new System.Drawing.Size(53, 20);
-            this.lblFullName.TabIndex = 3;
             this.lblFullName.Text = "Họ tên";
+
             // txtFullName
-            this.txtFullName.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.txtFullName.Location = new System.Drawing.Point(leftInput, yFullName - 4);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(520, 27);
-            this.txtFullName.TabIndex = 4;
-
-            top += gap;
 
             // lblUsername
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblUsername.Location = new System.Drawing.Point(leftLabel, yUsername);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(75, 20);
-            this.lblUsername.TabIndex = 5;
             this.lblUsername.Text = "Username";
+
             // txtUsername
-            this.txtUsername.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.txtUsername.Location = new System.Drawing.Point(leftInput, yUsername - 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(520, 27);
-            this.txtUsername.TabIndex = 6;
-
-            top += gap;
 
             // lblPassword
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblPassword.Location = new System.Drawing.Point(leftLabel, yPassword);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(70, 20);
-            this.lblPassword.TabIndex = 7;
             this.lblPassword.Text = "Mật khẩu";
+
             // txtPassword
-            this.txtPassword.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.txtPassword.Location = new System.Drawing.Point(leftInput, yPassword - 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(520, 27);
-            this.txtPassword.TabIndex = 8;
             this.txtPassword.UseSystemPasswordChar = true;
-
-            top += gap;
 
             // lblRole
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblRole.Location = new System.Drawing.Point(leftLabel, yRole);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(55, 20);
-            this.lblRole.TabIndex = 9;
             this.lblRole.Text = "Vai trò";
+
             // cboRole
             this.cboRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboRole.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.cboRole.Location = new System.Drawing.Point(leftInput, yRole - 4);
             this.cboRole.Name = "cboRole";
             this.cboRole.Size = new System.Drawing.Size(520, 28);
-            this.cboRole.TabIndex = 10;
-
-            top += gap;
 
             // lblStore
             this.lblStore.AutoSize = true;
-            this.lblStore.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblStore.Location = new System.Drawing.Point(leftLabel, yStore);
             this.lblStore.Name = "lblStore";
             this.lblStore.Size = new System.Drawing.Size(72, 20);
-            this.lblStore.TabIndex = 11;
             this.lblStore.Text = "Cửa hàng";
+
             // cboStore
             this.cboStore.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboStore.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.cboStore.Location = new System.Drawing.Point(leftInput, yStore - 4);
             this.cboStore.Name = "cboStore";
             this.cboStore.Size = new System.Drawing.Size(520, 28);
-            this.cboStore.TabIndex = 12;
-
-            top += gap;
 
             // lblPhone
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblPhone.Location = new System.Drawing.Point(leftLabel, yPhone);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(36, 20);
-            this.lblPhone.TabIndex = 13;
             this.lblPhone.Text = "SĐT";
+
             // txtPhone
-            this.txtPhone.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.txtPhone.Location = new System.Drawing.Point(leftInput, yPhone - 4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(520, 27);
-            this.txtPhone.TabIndex = 14;
-
-            top += gap;
 
             // lblEmail
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblEmail.Location = new System.Drawing.Point(leftLabel, yEmail);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(46, 20);
-            this.lblEmail.TabIndex = 15;
             this.lblEmail.Text = "Email";
+
             // txtEmail
-            this.txtEmail.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.txtEmail.Location = new System.Drawing.Point(leftInput, yEmail - 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(520, 27);
-            this.txtEmail.TabIndex = 16;
-
-            top += gap;
 
             // lblAddress
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblAddress.Location = new System.Drawing.Point(leftLabel, yAddress);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(50, 20);
-            this.lblAddress.TabIndex = 17;
             this.lblAddress.Text = "Địa chỉ";
+
             // txtAddress
-            this.txtAddress.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.txtAddress.Location = new System.Drawing.Point(leftInput, yAddress - 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(520, 27);
-            this.txtAddress.TabIndex = 18;
-
-            top += gap;
 
             // lblBaseSalary
             this.lblBaseSalary.AutoSize = true;
-            this.lblBaseSalary.Location = new System.Drawing.Point(leftLabel, top);
+            this.lblBaseSalary.Location = new System.Drawing.Point(leftLabel, yBaseSalary);
             this.lblBaseSalary.Name = "lblBaseSalary";
             this.lblBaseSalary.Size = new System.Drawing.Size(96, 20);
-            this.lblBaseSalary.TabIndex = 19;
             this.lblBaseSalary.Text = "Lương cơ bản";
+
             // txtBaseSalary
-            this.txtBaseSalary.Location = new System.Drawing.Point(leftInput, top - 4);
+            this.txtBaseSalary.Location = new System.Drawing.Point(leftInput, yBaseSalary - 4);
             this.txtBaseSalary.Name = "txtBaseSalary";
             this.txtBaseSalary.Size = new System.Drawing.Size(520, 27);
-            this.txtBaseSalary.TabIndex = 20;
 
             // btnSave
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(28, 28, 40);
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(500, 370);
+            this.btnSave.Location = new System.Drawing.Point(500, 15);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(90, 36);
-            this.btnSave.TabIndex = 21;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 
             // btnCancel
-            this.btnCancel.Location = new System.Drawing.Point(600, 370);
+            this.btnCancel.Location = new System.Drawing.Point(600, 15);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(90, 36);
-            this.btnCancel.TabIndex = 22;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 
-            // Controls
+            // Add controls
             this.Controls.Add(this.lblTitle);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnCancel);
 
             this.Controls.Add(this.lblCode);
             this.Controls.Add(this.txtCode);
@@ -315,11 +298,10 @@
             this.Controls.Add(this.lblBaseSalary);
             this.Controls.Add(this.txtBaseSalary);
 
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnCancel);
-
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+      
     }
 }

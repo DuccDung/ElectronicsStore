@@ -1,31 +1,37 @@
 ﻿using ElectronicsStoreSystem.Model;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace ElectronicsStoreSystem.View
 {
-    public partial class SupplierEditForm : Form
+
+    public partial class SupEditForm : Form
     {
         private readonly int? _supplierId;
-
-        public SupplierEditForm(int? supplierId)
+        public SupEditForm()
         {
-            _supplierId = supplierId;
             InitializeComponent();
-            LoadDataIfEdit();
+        }
+        public SupEditForm(int? supplierId)
+        {
+            InitializeComponent();
+            _supplierId = supplierId;
+
+            if (!IsInDesignMode())
+                LoadDataIfEdit();
+        }
+        private bool IsInDesignMode()
+        {
+            // DesignMode đôi khi sai ở constructor, nên check thêm UsageMode
+            return DesignMode || LicenseManager.UsageMode == LicenseUsageMode.Designtime;
         }
 
         private void LoadDataIfEdit()
@@ -49,7 +55,6 @@ namespace ElectronicsStoreSystem.View
             txtTaxCode.Text = s.TaxCode;
             txtAddress.Text = s.AddressLine;
         }
-
         private async void btnSave_Click(object sender, EventArgs e)
         {
             var code = (txtCode.Text ?? "").Trim();
@@ -133,4 +138,3 @@ namespace ElectronicsStoreSystem.View
         }
     }
 }
-

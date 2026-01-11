@@ -13,7 +13,7 @@
     <Compile Update="View\DashboardHomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\EmployeeEditForm.cs">
+    <Compile Update="View\EmpEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\EmployeeListForm.cs">
@@ -37,7 +37,7 @@
     <Compile Update="View\PurchaseReceiveForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\SupplierEditForm.cs">
+    <Compile Update="View\SupEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\SupplierListForm.cs">

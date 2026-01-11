@@ -129,7 +129,7 @@ namespace ElectronicsStoreSystem.View
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            using var f = new SupplierEditForm(null);
+            using var f = new SupEditForm(null);
             if (f.ShowDialog(this) == DialogResult.OK)
                 LoadGrid();
         }
@@ -143,7 +143,7 @@ namespace ElectronicsStoreSystem.View
                 return;
             }
 
-            using var f = new SupplierEditForm(id.Value);
+            using var f = new SupEditForm(id.Value);
             if (f.ShowDialog(this) == DialogResult.OK)
                 LoadGrid();
         }

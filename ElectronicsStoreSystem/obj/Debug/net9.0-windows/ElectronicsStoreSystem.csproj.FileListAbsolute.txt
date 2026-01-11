@@ -146,9 +146,7 @@ D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Deb
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.ProductListForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.CategoryEditForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.CategoryListForm.resources
-D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.SupplierEditForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.SupplierListForm.resources
-D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.EmployeeEditForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.EmployeeListForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.DashboardHomeForm.resources
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\ClosedXML.dll
@@ -159,3 +157,5 @@ D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Deb
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\RBush.dll
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\bin\Debug\net9.0-windows\SixLabors.Fonts.dll
 D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.MonthlyReportForm.resources
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.SupEditForm.resources
+D:\laptrinhweb\code_outsrc\ElectronicsStoreSystem\ElectronicsStoreSystem\obj\Debug\net9.0-windows\ElectronicsStoreSystem.View.EmpEditForm.resources
